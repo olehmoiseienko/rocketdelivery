@@ -1,8 +1,8 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
-import Login from './login/Login';
-import OrderView from './order-view/OrderView';
-import {OrderProvider} from "./provider/OrderProvider";
+import { Routes, Route } from 'react-router-dom';
+import Login from './components/login/Login';
+import OrderView from './components/order-view/OrderView';
+import { OrderProvider } from './provider/OrderProvider';
 import './App.css';
 
 function App() {
