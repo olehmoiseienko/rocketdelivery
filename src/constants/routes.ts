@@ -1,5 +1,4 @@
 export const routes = {
-  home: '/',
   login: '/login',
-  orderView: '/order-view',
-}
+  orderView: '/order-view'
+};

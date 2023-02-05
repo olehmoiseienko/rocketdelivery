@@ -8,10 +8,10 @@ import './App.css';
 function App() {
   return (
     <OrderProvider>
-      <Routes >
+      <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/order-view/:id" element={<OrderView />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/order-view" element={<OrderView />} />
+        <Route path="*" element={<Login />} />
       </Routes>
     </OrderProvider>
   );
