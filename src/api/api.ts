@@ -1,20 +1,29 @@
-import Order from "../models/Order";
+import Order from '../models/Order';
 import mocks from '../mocks/orders.json';
 
-const ORDERS_URL = '/orders'
+const ORDERS_URL = '/orders';
 
 export type Params = {
-  zipCode: string
-}
+  orderNumber: string;
+  zipCode: string;
+};
 export const getOrdersApi = async (params: Params): Promise<Order[] | Error> => {
-  console.log("params", params);
-  try {
-    return await new Promise(resolve => {
-      setTimeout(() => {
-        resolve(mocks as Order[]);
-      }, 1000)
-    });
-  } catch (error) {
-    return error as Error;
-  }
-}
+  return await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const order = mocks.find((order) => order.tracking_number === params.orderNumber);
+
+      if (!order) {
+        return reject(`The ${params.orderNumber} order number is not found.`);
+      }
+
+      if (order.zip_code !== params.zipCode) {
+        return reject(`The ${params.zipCode} zip code is not correct.`);
+      }
+
+      if (order) {
+        // @ts-ignore
+        resolve(order);
+      }
+    }, 1000);
+  });
+};
