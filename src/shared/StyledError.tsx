@@ -1,10 +1,7 @@
-import React from 'react';
+import styled from "styled-components";
 
-interface Props {
-  children: string;
-}
-const StyledError = ({ children }: Props) => {
-  return <>{children}</>;
-};
+const StyledError = styled.div`
+  color: var(--main-red-color);
+`;
 
 export default StyledError;
