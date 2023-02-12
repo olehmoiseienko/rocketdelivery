@@ -8,6 +8,7 @@ const StyledStatusCard = styled.div`
   background-color: var(--main-light-grey-color);
 
   .current-status {
+    min-height: 70px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
