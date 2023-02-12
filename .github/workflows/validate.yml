@@ -31,11 +31,3 @@ jobs:
 
       - name: Run tests
         run: yarn test
-
-      - name: Build
-        run: CI=false yarn build
-
-      - name: Commit
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: deploy
