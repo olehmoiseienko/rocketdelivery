@@ -32,8 +32,8 @@ jobs:
       - name: Run tests
         run: yarn test
 
-      - name: Install dependencies
-        run: yarn build
+      - name: Build
+        run: CI=false yarn build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
