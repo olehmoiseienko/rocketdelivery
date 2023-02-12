@@ -5,6 +5,12 @@ import { useOrderContext } from '../../provider/OrderProvider';
 import StyledLoader from '../../shared/StyledLoader';
 import StyledError from '../../shared/StyledError';
 import { isValidOrderNumber, isValidZipCode } from './validator';
+import StyledLoginWrapper from './StyledLoginWrapper';
+import StyledLogoWrapper from './StyledLogoWrapper';
+import StyledInput from '../../shared/StyledInput';
+import StyledFormRow from '../../shared/StyledFormRow';
+import StyledButton, { ButtonType } from '../../shared/StyledButton';
+import Logo from '../../shared/Logo';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -34,33 +40,44 @@ const Login = () => {
   };
 
   return (
-    <>
-      {isLoading && <StyledLoader />}
+    <StyledLoginWrapper>
+      <StyledLogoWrapper>
+        <Logo />
+      </StyledLogoWrapper>
+
+      <h1>Track your order</h1>
+
+      <p>
+        Enter your order number and zip code combination to see the order details and shipping
+        updates
+      </p>
       {error && <StyledError>{error}</StyledError>}
       <form onSubmit={(event) => handleSubmit(event)}>
-        <div>
+        <StyledFormRow>
           <label htmlFor="ordernumber">Order Number</label>
-          <input
+          <StyledInput
             value={orderNumber}
             type="text"
             id="ordernumber"
             onChange={(e: ChangeEvent<HTMLInputElement>) => setOrderNumber(e.target.value)}
           />
-        </div>
+        </StyledFormRow>
 
-        <div>
+        <StyledFormRow>
           <label htmlFor="zipcode">Zip Code</label>
-          <input
+          <StyledInput
             value={zipCode}
             type="text"
             id="zipcode"
             onChange={(e: ChangeEvent<HTMLInputElement>) => setZipCode(e.target.value)}
           />
-        </div>
+        </StyledFormRow>
 
-        <button disabled={!isFormValid}>Track</button>
+        <StyledButton buttonType={ButtonType.PRIMARY} disabled={!isFormValid}>
+          {isLoading ? <StyledLoader /> : <span>Track</span>}
+        </StyledButton>
       </form>
-    </>
+    </StyledLoginWrapper>
   );
 };
 
