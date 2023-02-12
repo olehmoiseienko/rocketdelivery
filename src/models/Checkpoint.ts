@@ -42,9 +42,11 @@ export interface NewDeliveryDateCheckpoint extends BaseCheckpoint {
 
 export interface ReadyForCollectionCheckpoint extends BaseCheckpoint {
   status: CheckpointStatus.READY_FOR_COLLECTION;
-  meta: {
-    pickup_address: string;
-    pickup_address_link: string;
-    pickup_address_map_url: string;
-  };
+  meta: MetaAddressInfo;
 }
+
+export type MetaAddressInfo = {
+  pickup_address: string;
+  pickup_address_link: string;
+  pickup_address_map_url: string;
+};

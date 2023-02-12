@@ -1,8 +1,9 @@
 import StyledButton, { ButtonType } from '../../shared/StyledButton';
 import StyledMap from './StyledMap';
+import { MetaAddressInfo } from '../../models/Checkpoint';
 
 interface Props {
-  mapData: any;
+  mapData: MetaAddressInfo;
 }
 
 const Map = ({ mapData }: Props) => {

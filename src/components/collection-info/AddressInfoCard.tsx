@@ -1,9 +1,10 @@
 import CourierCode from '../../constants/CourierCode';
 import StyledAddressInfoCard from './StyledAddressInfoCard';
+import { MetaAddressInfo } from '../../models/Checkpoint';
 
 interface Props {
   courier: CourierCode;
-  addressInfo: any;
+  addressInfo: MetaAddressInfo;
 }
 const AddressInfoCard = ({ courier, addressInfo }: Props) => {
   return (

@@ -2,11 +2,12 @@ import StyledArticleCard from './StyledArticleCard';
 import StyledSubHeading from '../../shared/StyledSubHeading';
 import { ValidIcons } from '../../Icon/icons';
 import Icon from '../../Icon/Icon';
+import Article from '../../models/Article';
 
 const currency = '$';
 
 interface Props {
-  article: any;
+  article: Article;
 }
 const ArticleCard = ({ article }: Props) => {
   return (

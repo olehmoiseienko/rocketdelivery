@@ -18,7 +18,7 @@ type Props = {
   width?: number;
   color?: string;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 const SvgIcon = styled.div<SvgComponentProps>`

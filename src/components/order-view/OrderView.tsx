@@ -15,6 +15,7 @@ import Map from '../collection-info/Map';
 import ArticlesContainer from '../articles/ArticlesContainer';
 import ArticleCard from '../articles/ArticleCard';
 import CheckpointStatus from '../../constants/CheckpointStatus';
+import { MetaAddressInfo } from '../../models/Checkpoint';
 
 // const currentOrder = mocks[2] as Order;
 
@@ -23,8 +24,7 @@ const OrderView = () => {
   const { currentOrder, resetOrderData } = useOrderContext();
 
   const isAddressInfo =
-    currentOrder?.checkpoints[0].status === CheckpointStatus.READY_FOR_COLLECTION &&
-    currentOrder?.checkpoints[0]?.meta?.pickup_address;
+    currentOrder?.checkpoints[0].status === CheckpointStatus.READY_FOR_COLLECTION;
 
   useEffect(() => {
     if (!currentOrder) {
@@ -36,7 +36,7 @@ const OrderView = () => {
   return (
     <>
       <StyledCard>
-        {currentOrder &&
+        {currentOrder && (
           <>
             <TrackingNumber number={currentOrder?.tracking_number} />
             <ParcelStatusCard checkpoint={currentOrder?.checkpoints[0]} />
@@ -50,9 +50,9 @@ const OrderView = () => {
               <CollectionInfoContainer>
                 <AddressInfoCard
                   courier={currentOrder.courier}
-                  addressInfo={currentOrder.checkpoints[0].meta}
+                  addressInfo={currentOrder.checkpoints[0].meta as MetaAddressInfo}
                 />
-                <Map mapData={currentOrder.checkpoints[0].meta} />
+                <Map mapData={currentOrder.checkpoints[0].meta as MetaAddressInfo} />
               </CollectionInfoContainer>
             )}
 
@@ -64,7 +64,7 @@ const OrderView = () => {
               </ArticlesContainer>
             )}
           </>
-        }
+        )}
       </StyledCard>
     </>
   );

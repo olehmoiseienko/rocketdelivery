@@ -42,8 +42,8 @@ export const OrderProvider = ({ children }: ComponentProviderProps) => {
         type: OrderAction.SET_ORDERS,
         payload: currentOrder
       });
-    } catch (e: any) {
-      dispatch({ type: OrderAction.SET_ERROR, payload: e.toString() });
+    } catch (e: unknown) {
+      dispatch({ type: OrderAction.SET_ERROR, payload: (e as Error).toString() });
     } finally {
       dispatch({ type: OrderAction.IS_LOADING, payload: false });
     }
