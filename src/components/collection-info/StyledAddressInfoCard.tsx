@@ -4,7 +4,7 @@ const StyledAddressInfoCard = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: var(--main-card-margin);
 
   .address-info-courier {
     font-weight: bold;

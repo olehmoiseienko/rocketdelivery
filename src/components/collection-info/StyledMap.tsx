@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledMap = styled.div`
   position: relative;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: var(--main-card-margin);
 
   img {
     width: 100%;

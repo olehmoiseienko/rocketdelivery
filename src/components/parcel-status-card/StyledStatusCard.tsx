@@ -16,7 +16,7 @@ const StyledStatusCard = styled.div`
     color: var(--main-deep-blue-color);
 
     .current-status-icon {
-      margin-right: 15px;
+      margin-right: var(--main-card-margin);
     }
   }
 

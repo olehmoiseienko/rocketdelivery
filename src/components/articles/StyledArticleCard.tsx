@@ -6,13 +6,13 @@ const StyledArticleCard = styled.div`
   align-items: center;
   text-align: left;
   padding: 5px 10px;
-  margin-bottom: 15px;
+  margin-bottom: var(--main-card-margin);
   border: 1px solid var(--main-border-color);
   border-radius: var(--border-radius-default);
 
   .article-card-image {
     width: 100px;
-    margin-right: 20px;
+    margin-right: var(--main-card-margin);
 
     img {
       width: 100%;

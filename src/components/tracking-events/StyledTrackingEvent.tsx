@@ -46,7 +46,7 @@ const StyledTrackingEvent = styled.div`
   }
 
   .tracking-status-info {
-    margin-left: 15px;
+    margin-left: var(--main-card-margin);
     text-align: left;
 
     .tracking-status-info-date,
