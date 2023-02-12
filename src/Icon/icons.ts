@@ -5,4 +5,5 @@ export enum ValidIcons {
   REGISTERED = 'Registered',
   IN_TRANSIT = 'InTransit',
   DELIVERED = 'Delivered',
+  Placeholder = 'Placeholder'
 }

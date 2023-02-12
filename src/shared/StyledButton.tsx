@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export enum ButtonType {
-  DEFAULT = "default",
-  PRIMARY = "primary",
+  DEFAULT = 'default',
+  PRIMARY = 'primary'
 }
 
 interface ButtonProps {
@@ -12,22 +12,22 @@ interface ButtonProps {
 const getFontColor = (buttonType: ButtonType) => {
   switch (buttonType) {
     case ButtonType.DEFAULT:
-      return "var(--main-text-color)";
+      return 'var(--main-text-color)';
     case ButtonType.PRIMARY:
-      return "var(--main-white-color)";
+      return 'var(--main-white-color)';
     default:
-      return "var(--main-text-color)";
+      return 'var(--main-text-color)';
   }
 };
 
 const getBackgroundColor = (buttonType: ButtonType) => {
   switch (buttonType) {
     case ButtonType.DEFAULT:
-      return "var(--main-white-color)";
+      return 'var(--main-white-color)';
     case ButtonType.PRIMARY:
-      return "var(--main-deep-blue-color)";
+      return 'var(--main-deep-blue-color)';
     default:
-      return "var(--main-white-color)";
+      return 'var(--main-white-color)';
   }
 };
 

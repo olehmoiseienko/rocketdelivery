@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const LoaderWrapper = styled.div`
   .spinner-wrapper {
@@ -48,20 +48,13 @@ const LoaderWrapper = styled.div`
 const StyledLoader = () => {
   return (
     <LoaderWrapper>
-        <div className={"spinner-wrapper"}>
-          <svg className="spinner" viewBox="0 0 50 50">
-            <circle
-              className="path"
-              cx="25"
-              cy="25"
-              r="20"
-              fill="none"
-              strokeWidth="5"
-            ></circle>
-          </svg>
-        </div>
-  </LoaderWrapper>);
+      <div className={'spinner-wrapper'}>
+        <svg className="spinner" viewBox="0 0 50 50">
+          <circle className="path" cx="25" cy="25" r="20" fill="none" strokeWidth="5"></circle>
+        </svg>
+      </div>
+    </LoaderWrapper>
+  );
 };
 
 export default StyledLoader;
-

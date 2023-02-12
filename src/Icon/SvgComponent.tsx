@@ -1,4 +1,4 @@
-import React  from "react";
+import React from 'react';
 
 export type SvgComponentProps = {
   height: string;
@@ -8,9 +8,7 @@ export type SvgComponentProps = {
   lower?: boolean;
 };
 
-const getIconUsingRequire = (
-  iconName: string
-): React.ComponentType<SvgComponentProps> => {
+const getIconUsingRequire = (iconName: string): React.ComponentType<SvgComponentProps> => {
   return require(`./assets/${iconName}`).default;
 };
 

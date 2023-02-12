@@ -4,8 +4,8 @@ import Login from './components/login/Login';
 import OrderView from './components/order-view/OrderView';
 import { OrderProvider } from './provider/OrderProvider';
 import './App.css';
-import StyledMainLayout from "./shared/StyledMainLayout";
-import Header from "./shared/header/Header";
+import StyledMainLayout from './shared/StyledMainLayout';
+import Header from './shared/header/Header';
 
 function App() {
   return (

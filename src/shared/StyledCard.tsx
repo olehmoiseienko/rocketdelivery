@@ -1,21 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 200px;
-  padding: 16px;
+  min-width: 300px;
+  max-width: 400px;
+  margin: 15px;
+  padding: 45px 15px;
   border: 1px solid var(--main-border-color);
-  border-radius: 20px;
+  border-radius: var(--border-radius-default);
   background-color: var(--main-white-color);
 
-  h1 {
-    font-size: var(--font-size-h1);
-    font-weight: 600;
-  }
-
-  p {
-    color: var(--main-text-helper-color);
+  > div {
+    margin-top: 15px;
   }
 `;
 
