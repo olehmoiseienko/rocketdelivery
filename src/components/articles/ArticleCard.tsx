@@ -14,9 +14,14 @@ const ArticleCard = ({ article }: Props) => {
     <StyledArticleCard>
       <div className="article-card-image">
         {article.articleImageUrl ? (
-          <img src={article.articleImageUrl} />
+          <img data-testid="article-image" src={article.articleImageUrl} />
         ) : (
-          <Icon width={100} height={100} name={ValidIcons.Placeholder} />
+          <Icon
+            width={100}
+            height={100}
+            name={ValidIcons.Placeholder}
+            data-testid="article-image-placeholder"
+          />
         )}
       </div>
 

@@ -71,3 +71,5 @@ export const useOrderContext = () => {
     resetOrderData
   };
 };
+
+export default useOrderContext;

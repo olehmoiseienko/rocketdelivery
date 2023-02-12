@@ -1,7 +1,7 @@
 interface Article {
   articleNo: string;
   articleName: string;
-  articleImageUrl: string;
+  articleImageUrl: string | null;
   quantity: number;
   price: number;
 }

@@ -56,6 +56,7 @@ const Login = () => {
         <StyledFormRow>
           <label htmlFor="ordernumber">Order Number</label>
           <StyledInput
+            data-testid="ordernumber"
             value={orderNumber}
             type="text"
             id="ordernumber"
@@ -66,6 +67,7 @@ const Login = () => {
         <StyledFormRow>
           <label htmlFor="zipcode">Zip Code</label>
           <StyledInput
+            data-testid="zipcode"
             value={zipCode}
             type="text"
             id="zipcode"
