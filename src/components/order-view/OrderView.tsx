@@ -38,7 +38,7 @@ const OrderView = () => {
             <ParcelStatusCard checkpoint={currentOrder?.checkpoints[0]} />
             <TrackingEventsContainer>
               {currentOrder?.checkpoints.map((event) => (
-                <TrackingEvent key={event.event_timestamp} event={event} />
+                <TrackingEvent key={event.event_timestamp} event={event} showIndicator={currentOrder?.checkpoints.length > 1}/>
               ))}
             </TrackingEventsContainer>
 

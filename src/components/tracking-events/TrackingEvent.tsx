@@ -8,12 +8,17 @@ const iconSize = 24;
 
 interface Props {
   event: Checkpoint;
+  showIndicator: boolean;
 }
-const TrackingEvent = ({ event }: Props) => {
+const TrackingEvent = ({ event, showIndicator }: Props) => {
   return (
     <StyledTrackingEvent>
-      <div className="tracking-status-indicator-line" />
-      <div className="tracking-status-indicator-point" />
+      {showIndicator && (
+        <>
+          <div className="tracking-status-indicator-line" />
+          <div className="tracking-status-indicator-point" />
+        </>
+      )}
       <div className="tracking-status-icon">
         <Icon
           name={iconStatusMapping[event.status]}
