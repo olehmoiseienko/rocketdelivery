@@ -66,6 +66,7 @@ export const useOrderContext = () => {
     state,
     isLoading: state.isLoading,
     currentOrder: state.currentOrder,
+    announcedDeliveryDate: state?.currentOrder?.delivery_info.announced_delivery_date,
     error: state.error,
     getOrders,
     resetOrderData

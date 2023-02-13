@@ -14,7 +14,7 @@ import ArticlesContainer from '../articles/ArticlesContainer';
 import ArticleCard from '../articles/ArticleCard';
 import CheckpointStatus from '../../constants/CheckpointStatus';
 import { MetaAddressInfo } from '../../models/Checkpoint';
-import DeliveryInfoCard from "../delivery-info/DeliveryInfoCard";
+import DeliveryInfoCard from '../delivery-info/DeliveryInfoCard';
 
 const OrderView = () => {
   const navigate = useNavigate();
@@ -39,7 +39,11 @@ const OrderView = () => {
             <ParcelStatusCard checkpoint={currentOrder?.checkpoints[0]} />
             <TrackingEventsContainer>
               {currentOrder?.checkpoints.map((event) => (
-                <TrackingEvent key={event.event_timestamp} event={event} showIndicator={currentOrder?.checkpoints.length > 1}/>
+                <TrackingEvent
+                  key={event.event_timestamp}
+                  event={event}
+                  showIndicator={currentOrder?.checkpoints.length > 1}
+                />
               ))}
             </TrackingEventsContainer>
 

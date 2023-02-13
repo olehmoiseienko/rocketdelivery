@@ -25,6 +25,7 @@ const StyledStatusCard = styled.div`
     text-align: left;
     font-weight: 600;
     font-size: var(--font-size-sm);
+    line-height: var(--font-size-md);
     color: var(--main-dark-grey-color);
   }
 `;

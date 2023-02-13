@@ -2,6 +2,8 @@ import Icon from '../../Icon/Icon';
 import { Checkpoint } from '../../models/Checkpoint';
 import StyledStatusCard from './StyledStatusCard';
 import iconStatusMapping from '../../constants/icon-status-mapping';
+import useOrderContext from '../../provider/OrderProvider';
+import CheckpointStatus from '../../constants/CheckpointStatus';
 
 const iconSize = 48;
 
@@ -10,6 +12,10 @@ interface Props {
 }
 
 const ParcelStatusCard = ({ checkpoint }: Props) => {
+  const { announcedDeliveryDate } = useOrderContext();
+
+  const showAnnouncedDeliveryDate = checkpoint.status !== CheckpointStatus.READY_FOR_COLLECTION;
+
   return (
     <StyledStatusCard>
       <div className="current-status">
@@ -22,7 +28,10 @@ const ParcelStatusCard = ({ checkpoint }: Props) => {
         />
         {checkpoint.status}
       </div>
-      <div className="status-description">{checkpoint.status_details}</div>
+      <div className="status-description">
+        {checkpoint.status_details}
+        {showAnnouncedDeliveryDate && <div>Announced delivery date: {announcedDeliveryDate}</div>}
+      </div>
     </StyledStatusCard>
   );
 };
