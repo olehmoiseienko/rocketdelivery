@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useOrderContext } from '../../provider/OrderProvider';
-import { routes } from '../../constants/routes';
+import routes from '../../routes';
 import StyledCard from '../../shared/StyledCard';
-import mocks from '../../mocks/orders.json';
 import TrackingNumber from '../tracking-number/TrackingNumber';
 import ParcelStatusCard from '../parcel-status-card/ParcelStatusCard';
-import Order from '../../models/Order';
 import TrackingEventsContainer from '../tracking-events/TrackingEventsContainer';
 import TrackingEvent from '../tracking-events/TrackingEvent';
 import CollectionInfoContainer from '../collection-info/CollectionInfoContainer';
@@ -17,11 +15,9 @@ import ArticleCard from '../articles/ArticleCard';
 import CheckpointStatus from '../../constants/CheckpointStatus';
 import { MetaAddressInfo } from '../../models/Checkpoint';
 
-const currentOrder = mocks[1] as Order;
-
 const OrderView = () => {
   const navigate = useNavigate();
-  // const { currentOrder, resetOrderData } = useOrderContext();
+  const { currentOrder, resetOrderData } = useOrderContext();
 
   const isAddressInfo =
     currentOrder?.checkpoints[0].status === CheckpointStatus.READY_FOR_COLLECTION;
@@ -31,7 +27,7 @@ const OrderView = () => {
       navigate(`${routes.login}`);
     }
 
-    // return () => resetOrderData();
+    return () => resetOrderData();
   }, []);
   return (
     <>

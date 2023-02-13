@@ -6,6 +6,7 @@ import { OrderProvider } from './provider/OrderProvider';
 import './App.css';
 import StyledMainLayout from './shared/StyledMainLayout';
 import Header from './shared/header/Header';
+import routes from './routes';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
       <StyledMainLayout>
         <OrderProvider>
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/order-view" element={<OrderView />} />
+            <Route path={routes.login} element={<Login />} />
+            <Route path={routes.orderView} element={<OrderView />} />
             <Route path="*" element={<Login />} />
           </Routes>
         </OrderProvider>
