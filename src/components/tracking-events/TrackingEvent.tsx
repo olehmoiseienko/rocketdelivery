@@ -1,6 +1,6 @@
 import { Checkpoint } from '../../models/Checkpoint';
 import StyledTrackingEvent from './StyledTrackingEvent';
-import Icon from '../../Icon/Icon';
+import Icon from '../../shared/Icon/Icon';
 import iconStatusMapping from '../../constants/icon-status-mapping';
 import StyledSubHeading from '../../shared/StyledSubHeading';
 

@@ -1,4 +1,4 @@
-import Icon from '../../Icon/Icon';
+import Icon from '../../shared/Icon/Icon';
 import { Checkpoint } from '../../models/Checkpoint';
 import StyledStatusCard from './StyledStatusCard';
 import iconStatusMapping from '../../constants/icon-status-mapping';

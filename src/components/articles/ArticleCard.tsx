@@ -1,7 +1,7 @@
 import StyledArticleCard from './StyledArticleCard';
 import StyledSubHeading from '../../shared/StyledSubHeading';
-import { ValidIcons } from '../../Icon/icons';
-import Icon from '../../Icon/Icon';
+import { ValidIcons } from '../../shared/Icon/icons';
+import Icon from '../../shared/Icon/Icon';
 import Article from '../../models/Article';
 
 const currency = '$';

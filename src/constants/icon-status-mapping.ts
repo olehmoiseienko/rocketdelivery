@@ -1,5 +1,5 @@
 import CheckpointStatus from './CheckpointStatus';
-import { ValidIcons } from '../Icon/icons';
+import { ValidIcons } from '../shared/Icon/icons';
 
 const iconStatusMapping: Record<CheckpointStatus, ValidIcons> = {
   [CheckpointStatus.IN_TRANSIT]: ValidIcons.IN_TRANSIT,
