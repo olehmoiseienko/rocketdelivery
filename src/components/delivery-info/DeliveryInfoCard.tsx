@@ -20,7 +20,6 @@ const DeliveryInfoCard = ({ deliveryInfo }: Props) => {
         <div>{deliveryInfo.order_date}</div>
       </StyledInfoRow>
 
-
       <StyledInfoRow>
         <div>Recipient:</div>
         <div>{deliveryInfo.recipient}</div>
@@ -31,7 +30,6 @@ const DeliveryInfoCard = ({ deliveryInfo }: Props) => {
         <div>{deliveryInfo.orderNo}</div>
       </StyledInfoRow>
     </div>
-
   );
 };
 

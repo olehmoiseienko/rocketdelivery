@@ -5,5 +5,4 @@ const routes = {
   orderView: `${baseUrl}/order-view`
 };
 
-
 export default routes;

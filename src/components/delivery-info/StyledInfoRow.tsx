@@ -6,11 +6,11 @@ const StyledInfoRow = styled.div`
   text-align: left;
   margin-top: 10px;
   font-size: var(--font-size-sm);
-  
+
   > div {
     flex-grow: 10;
     padding: 0 var(--main-card-margin);
-    
+
     &:first-child {
       width: 140px;
       flex-grow: 1;
