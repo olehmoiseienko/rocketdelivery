@@ -14,6 +14,7 @@ import ArticlesContainer from '../articles/ArticlesContainer';
 import ArticleCard from '../articles/ArticleCard';
 import CheckpointStatus from '../../constants/CheckpointStatus';
 import { MetaAddressInfo } from '../../models/Checkpoint';
+import DeliveryInfoCard from "../delivery-info/DeliveryInfoCard";
 
 const OrderView = () => {
   const navigate = useNavigate();
@@ -59,6 +60,8 @@ const OrderView = () => {
                 ))}
               </ArticlesContainer>
             )}
+
+            <DeliveryInfoCard deliveryInfo={currentOrder.delivery_info} />
           </>
         )}
       </StyledCard>
